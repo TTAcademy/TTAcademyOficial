@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tijuana Trade Academy - Flyer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Color principal inspirado en el logo (azul oscuro/navy) */
+        :root {
+            --primary-color: #0A2240; /* Azul oscuro del logo (aproximado) */
+            --accent-color: #1E90FF;  /* Un azul más brillante para acentos */
+            --secondary-color: #4A5568; /* Gris para botones secundarios */
+            --secondary-hover-color: #2D3748; /* Gris más oscuro para hover */
+            --text-on-dark: #FFFFFF;
+            --text-on-light: #1F2937; /* Gris oscuro para texto sobre fondos claros */
+            --bg-light: #F3F4F6; /* Gris claro para fondos */
+            --bg-white: #FFFFFF;
+            --logo-shield-color: #0A2240; /* Color del escudo del logo */
+            --logo-graph-color: #FFFFFF;   /* Color de la gráfica del logo */
+            --logo-text-primary-color: #0A2240; /* Color del texto principal del logo */
+            --logo-text-secondary-color: #0A2240; /* Color del texto secundario del logo */
+        }
+
+        .hero-bg-solid {
+            background-color: var(--primary-color);
+        }
+        .gradient-text-custom {
+            background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: var(--text-on-dark);
+        }
+        .btn-primary:hover {
+            background-color: #081B33; 
+        }
+        .btn-accent {
+            background-color: var(--accent-color);
+            color: var(--text-on-dark);
+        }
+        .btn-accent:hover {
+            background-color: #1C86EE; 
+        }
+        .btn-secondary {
+            background-color: var(--secondary-color);
+            color: var(--text-on-dark);
+        }
+        .btn-secondary:hover {
+            background-color: var(--secondary-hover-color);
+        }
+        .text-primary {
+            color: var(--primary-color);
+        }
+        .text-accent {
+            color: var(--accent-color);
+        }
+        .bg-primary-light {
+            background-color: #E0E8F3; 
+        }
+        .prose-sm :where(p):not(:where([class~="not-prose"] *)) {
+            margin-top: 0.5em;
+            margin-bottom: 0.5em;
+        }
+    </style>
+</head>
+<body class="bg-bg-light">
+
+    <nav class="bg-bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <svg viewBox="0 0 280 60" class="h-10 md:h-12 mr-3" alt="Logo TTACADEMY">
+                    <defs>
+                        <style>
+                            @import url('https://fonts.googleapis.com/css2?family=Inter:wght@700;500&display=swap');
+                        </style>
+                    </defs>
+                    <g transform="translate(5, 5) scale(0.9)">
+                        <path d="M25 0 L50 12.5 L50 37.5 L25 50 L0 37.5 L0 12.5 Z" fill="var(--logo-shield-color)"/>
+                        <polyline points="10,35 18,25 28,32 35,15 40,20" fill="none" stroke="var(--logo-graph-color)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        <polygon points="35,15 32,18 35,21" fill="var(--logo-graph-color)" />
+                        <rect x="8" y="35" width="5" height="0" fill="var(--logo-graph-color)" /> 
+                        <rect x="16" y="25" width="5" height="10" fill="var(--logo-graph-color)" />
+                        <rect x="26" y="32" width="5" height="3" fill="var(--logo-graph-color)" />
+                    </g>
+                    <text x="70" y="32" font-family="'Inter', sans-serif" font-size="28" font-weight="700" fill="var(--logo-text-primary-color)">TTACADEMY</text>
+                    <text x="70" y="50" font-family="'Inter', sans-serif" font-size="10" font-weight="500" fill="var(--logo-text-secondary-color)">TIJUANA TRADE ACADEMY</text>
+                </svg>
+            </div>
+            <a href="#contacto" class="btn-primary hover:btn-primary font-semibold py-2 px-4 rounded-lg transition duration-300 text-sm md:text-base">
+                Contáctanos
+            </a>
+        </div>
+    </nav>
+
+    <header class="hero-bg-solid text-text-on-dark relative">
+        <div class="container mx-auto px-6 py-20 md:py-32 text-center relative z-10">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4 leading-tight">
+                ¡Desbloquea tu <span class="text-accent">Potencial Financiero</span>!
+            </h1>
+            <p class="text-lg md:text-2xl mb-8 text-gray-200 max-w-3xl mx-auto">
+                Aprende a invertir en la Bolsa de Valores y domina el Trading de Criptomonedas con <span class="font-semibold">Tijuana Trade Academy</span>.
+            </p>
+            <a href="#cursos" class="btn-accent hover:btn-accent text-white font-bold py-3 px-8 rounded-lg text-lg transition duration-300 transform hover:scale-105">
+                Descubre Nuestros Cursos
+            </a>
+        </div>
+    </header>
+
+    <section class="py-16 bg-bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-text-on-light mb-4">
+                    Bienvenido a <span class="gradient-text-custom">TTACADEMY</span>
+                </h2>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+                    En Tijuana Trade Academy, te proporcionamos el conocimiento y las herramientas necesarias para navegar con éxito en los mercados financieros. Nuestra misión es capacitarte para que tomes decisiones de inversión informadas y estratégicas.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="cursos" class="py-16 bg-bg-light">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-text-on-light text-center mb-12">Nuestros Programas Estrella</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-bg-white rounded-xl shadow-lg p-8 transition duration-300 card-hover flex flex-col">
+                    <div class="mb-4">
+                        <img src="https://placehold.co/600x400/0A2240/FFFFFF?text=Bolsa+de+Valores" alt="[Imagen de Inversiones en Bolsa de Valores]" class="w-full h-48 object-cover rounded-lg mb-4" onerror="this.onerror=null;this.src='https://placehold.co/600x400/cccccc/000000?text=Error+Imagen';">
+                    </div>
+                    <h3 class="text-2xl font-bold text-primary mb-3">Inversiones en la Bolsa de Valores</h3>
+                    <p class="text-gray-600 mb-4 flex-grow">
+                        Aprende desde los fundamentos hasta estrategias avanzadas para invertir en acciones, ETFs y otros instrumentos financieros. Desarrolla un portafolio sólido y alcanza tus metas financieras.
+                    </p>
+                    <ul class="text-gray-600 space-y-2 mb-6">
+                        <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Análisis técnico y fundamental.</li>
+                        <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Gestión de riesgos.</li>
+                        <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Estrategias de inversión a largo plazo.</li>
+                    </ul>
+                    <a href="#contacto" class="inline-block btn-primary hover:btn-primary font-semibold py-2 px-6 rounded-lg transition duration-300 mb-3 text-center">
+                        Más Información
+                    </a>
+                    <button onclick="toggleConceptHelper(this)" class="w-full text-sm btn-secondary font-semibold py-2 px-4 rounded-lg transition duration-300">
+                        ✨ Quiero entender un concepto de este curso
+                    </button>
+                    <div class="concept-helper-container hidden mt-3 p-4 border border-gray-200 rounded-md bg-gray-50">
+                        <label for="conceptInputBolsa" class="block text-sm font-medium text-gray-700 mb-1">Ingresa un concepto (ej: ETF, Stop-loss):</label>
+                        <input type="text" id="conceptInputBolsa" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md p-2 mb-2">
+                        <button onclick="fetchConceptExplanation('conceptInputBolsa', 'explanationResultBolsa', 'loadingBolsa', 'inversión en bolsa de valores')" class="w-full btn-accent text-white font-semibold py-2 px-4 rounded-lg transition duration-300 text-sm">
+                            Obtener Explicación ✨
+                        </button>
+                        <div id="loadingBolsa" class="mt-2 text-sm text-gray-500 hidden"><div class="flex justify-center items-center"><svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-primary" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>Procesando...</div></div>
+                        <div id="explanationResultBolsa" class="mt-3 text-sm text-gray-700 prose prose-sm max-w-none"></div>
+                    </div>
+                </div>
+
+                <div class="bg-bg-white rounded-xl shadow-lg p-8 transition duration-300 card-hover flex flex-col">
+                     <div class="mb-4">
+                        <img src="https://placehold.co/600x400/1E90FF/FFFFFF?text=Criptomonedas" alt="[Imagen de Trading de Criptomonedas]" class="w-full h-48 object-cover rounded-lg mb-4" onerror="this.onerror=null;this.src='https://placehold.co/600x400/cccccc/000000?text=Error+Imagen';">
+                    </div>
+                    <h3 class="text-2xl font-bold text-accent mb-3">Trading con Criptomonedas</h3>
+                    <p class="text-gray-600 mb-4 flex-grow">
+                        Sumérgete en el dinámico mundo de las criptomonedas. Aprende a analizar el mercado, identificar oportunidades y operar con Bitcoin, Ethereum y otras altcoins de forma segura y efectiva.
+                    </p>
+                     <ul class="text-gray-600 space-y-2 mb-6">
+                        <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Introducción a Blockchain y Cripto.</li>
+                        <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Plataformas de intercambio (Exchanges).</li>
+                        <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Estrategias de trading y DeFi.</li>
+                    </ul>
+                    <a href="#contacto" class="inline-block btn-accent hover:btn-accent text-white font-semibold py-2 px-6 rounded-lg transition duration-300 mb-3 text-center">
+                        Más Información
+                    </a>
+                    <button onclick="toggleConceptHelper(this)" class="w-full text-sm btn-secondary font-semibold py-2 px-4 rounded-lg transition duration-300">
+                        ✨ Quiero entender un concepto de este curso
+                    </button>
+                    <div class="concept-helper-container hidden mt-3 p-4 border border-gray-200 rounded-md bg-gray-50">
+                        <label for="conceptInputCripto" class="block text-sm font-medium text-gray-700 mb-1">Ingresa un concepto (ej: Blockchain, Altcoin):</label>
+                        <input type="text" id="conceptInputCripto" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md p-2 mb-2">
+                        <button onclick="fetchConceptExplanation('conceptInputCripto', 'explanationResultCripto', 'loadingCripto', 'trading de criptomonedas')" class="w-full btn-accent text-white font-semibold py-2 px-4 rounded-lg transition duration-300 text-sm">
+                            Obtener Explicación ✨
+                        </button>
+                        <div id="loadingCripto" class="mt-2 text-sm text-gray-500 hidden"><div class="flex justify-center items-center"><svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-primary" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>Procesando...</div></div>
+                        <div id="explanationResultCripto" class="mt-3 text-sm text-gray-700 prose prose-sm max-w-none"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-text-on-light text-center mb-12">¿Por Qué Elegir TTACADEMY?</h2>
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+                <div class="p-6">
+                    <div class="bg-primary-light text-primary rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v11.494m0 0A8.487 8.487 0 0019.5 21M12 17.747A8.487 8.487 0 014.5 21M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-text-on-light mb-2">Instructores Expertos</h3>
+                    <p class="text-gray-600">Aprende de profesionales con experiencia real en los mercados.</p>
+                </div>
+                <div class="p-6">
+                    <div class="bg-primary-light text-primary rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                         <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-text-on-light mb-2">Conocimiento Práctico</h3>
+                    <p class="text-gray-600">Enfoque en habilidades aplicables para resultados tangibles.</p>
+                </div>
+                <div class="p-6">
+                    <div class="bg-primary-light text-primary rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-text-on-light mb-2">Comunidad de Traders</h3>
+                    <p class="text-gray-600">Conecta con otros estudiantes y comparte experiencias.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="py-20 bg-primary text-text-on-dark">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">¿Listo para Transformar tu Futuro Financiero?</h2>
+            <p class="text-lg md:text-xl mb-8 text-gray-200 max-w-2xl mx-auto">
+                No esperes más. Da el primer paso hacia la libertad financiera. ¡Inscríbete en nuestros cursos hoy mismo!
+            </p>
+            <div class="max-w-md mx-auto bg-bg-white p-8 rounded-lg shadow-xl text-text-on-light">
+                <h3 class="text-2xl font-semibold mb-4 text-primary">Ponte en Contacto</h3>
+                <p class="mb-2"><strong>Email:</strong> TTAcademyOficial@hotmail.com</p>
+                <p class="mb-2"><strong>Teléfono:</strong> +52 (664) 123-4567 (Ejemplo)</p>
+                <p class="mb-6"><strong>Dirección:</strong> Av. Revolución, Tijuana, B.C. (Ejemplo)</p>
+                <a href="mailto:TTAcademyOficial@hotmail.com" class="w-full block text-center btn-accent hover:btn-accent text-white font-bold py-3 px-6 rounded-lg text-lg transition duration-300 transform hover:scale-105">
+                    Enviar un Email
+                </a>
+                 <button onclick="showModal()" class="mt-4 w-full block text-center bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg text-lg transition duration-300 transform hover:scale-105">
+                    Registrarme Ahora
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-gray-300 py-12">
+        <div class="container mx-auto px-6 text-center">
+            <div class="mb-4">
+                <a href="https://www.instagram.com/ttacademyoficial/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white mx-2" aria-label="Instagram de TT Academy Oficial">
+                    <svg class="w-6 h-6 inline-block" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.17.053 1.805.248 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.167.422.362 1.057.413 2.227.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.053 1.17-.248 1.805-.413 2.227-.217.562-.477.96-.896 1.382-.42.419-.819.679-1.381.896-.422.167-1.057.362-2.227.413-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.053-1.805-.248-2.227-.413-.562-.217-.96-.477-1.382-.896-.419-.42-.679-.819-.896-1.381-.167-.422-.362-1.057-.413-2.227-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.053-1.17.248-1.805.413-2.227.217-.562.477.96.896-1.382.42-.419.819-.679 1.381-.896.422-.167 1.057-.362 2.227-.413C8.416 2.175 8.796 2.163 12 2.163m0-2.163C8.74 0 8.31.012 7.053.072 5.74.132 4.643.344 3.68.772 2.734 1.193 1.945 1.823 1.176 2.592.407 3.361.195 4.15.773 5.095c-.428.963-.64 2.059-.7 3.372C0 8.74 0 9.16 0 12s.012 3.26.072 4.517c.06 1.313.272 2.41.7 3.372.428.945.857 1.734 1.626 2.503.769.769 1.558.981 2.503 1.193.963.428 2.059.64 3.372.7 1.257.06 1.687.072 4.947.072s3.69-.012 4.947-.072c1.313-.06 2.41-.272 3.372-.7.945-.428 1.734-.857 2.503-1.626.769-.769.981-1.558 1.193-2.503.428-.963.64-2.059.7-3.372.06-1.257.072-1.687.072-4.947s-.012-3.69-.072-4.947c-.06-1.313-.272-2.41-.7-3.372-.218-.562-.477-.96-.896-1.382-.42-.419-.819-.679-1.381-.896-.422-.167-1.057-.362-2.227-.413C15.584.012 15.204 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.88 1.44 1.44 0 000-2.88z"/>
+                    </svg>
+                </a>
+                </div>
+            <p>&copy; <span id="currentYear"></span> Tijuana Trade Academy. Todos los derechos reservados.</p>
+            <p class="text-sm text-gray-500 mt-1">Transformando tu futuro financiero, un trade a la vez.</p>
+        </div>
+    </footer>
+
+    <div id="registrationModal" class="fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full flex items-center justify-center hidden z-50">
+        <div class="relative p-8 bg-bg-white w-full max-w-md m-auto flex-col flex rounded-lg shadow-xl">
+            <button onclick="hideModal()" class="absolute top-0 right-0 mt-4 mr-4 text-gray-600 hover:text-gray-800">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+            <h2 class="text-2xl font-bold text-primary mb-6 text-center">Regístrate en TTACADEMY</h2>
+            <form id="registrationForm">
+                <div class="mb-4">
+                    <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Nombre Completo:</label>
+                    <input type="text" id="name" name="name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+                </div>
+                <div class="mb-4">
+                    <label for="emailModal" class="block text-gray-700 text-sm font-bold mb-2">Correo Electrónico:</label>
+                    <input type="email" id="emailModal" name="emailModal" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+                </div>
+                <div class="mb-4">
+                    <label for="phone" class="block text-gray-700 text-sm font-bold mb-2">Teléfono (Opcional):</label>
+                    <input type="tel" id="phone" name="phone" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                </div>
+                <div class="mb-6">
+                    <label for="courseInterest" class="block text-gray-700 text-sm font-bold mb-2">Curso de Interés:</label>
+                    <select id="courseInterest" name="courseInterest" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                        <option value="bolsa">Inversiones en Bolsa de Valores</option>
+                        <option value="cripto">Trading con Criptomonedas</option>
+                        <option value="ambos">Ambos Cursos</option>
+                    </select>
+                </div>
+                <button type="submit" class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-lg focus:outline-none focus:shadow-outline transition duration-300">
+                    Enviar Registro
+                </button>
+            </form>
+            <div id="formMessage" class="mt-4 text-center"></div>
+        </div>
+    </div>
+
+    <script>
+        // Set current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Modal functionality
+        const modal = document.getElementById('registrationModal');
+        const registrationForm = document.getElementById('registrationForm');
+        const formMessage = document.getElementById('formMessage');
+
+        function showModal() {
+            if(modal) modal.classList.remove('hidden');
+        }
+
+        function hideModal() {
+            if(modal) modal.classList.add('hidden');
+            if(formMessage) formMessage.textContent = ''; 
+            if (registrationForm) { 
+                 registrationForm.reset(); 
+            }
+        }
+
+        if (registrationForm) { 
+            registrationForm.addEventListener('submit', function(event) {
+                event.preventDefault(); 
+                
+                const nameInput = document.getElementById('name');
+                const emailModalInput = document.getElementById('emailModal'); 
+                
+                if (!nameInput || !nameInput.value.trim() || !emailModalInput || !emailModalInput.value.trim()) {
+                    if(formMessage) {
+                        formMessage.textContent = 'Por favor, completa los campos obligatorios.';
+                        formMessage.className = 'mt-4 text-center text-red-600 font-semibold';
+                    }
+                    return;
+                }
+                if (!emailModalInput.value.includes('@')) {
+                     if(formMessage) {
+                        formMessage.textContent = 'Por favor, introduce un correo electrónico válido.';
+                        formMessage.className = 'mt-4 text-center text-red-600 font-semibold';
+                     }
+                    return;
+                }
+
+                if(formMessage) {
+                    formMessage.textContent = '¡Gracias por registrarte! Nos pondremos en contacto contigo pronto.';
+                    formMessage.className = 'mt-4 text-center text-green-600 font-semibold';
+                }
+            });
+        }
+
+        // Close modal if clicked outside of it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                hideModal();
+            }
+        }
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape" && modal && !modal.classList.contains('hidden')) {
+                hideModal();
+            }
+        });
+
+        // Gemini Concept Helper functions
+        function toggleConceptHelper(buttonElement) {
+            const helperContainer = buttonElement.nextElementSibling;
+            if (helperContainer && helperContainer.classList.contains('concept-helper-container')) {
+                helperContainer.classList.toggle('hidden');
+            }
+        }
+
+        async function fetchConceptExplanation(inputId, resultId, loadingId, courseContext) {
+            const conceptInput = document.getElementById(inputId);
+            const resultArea = document.getElementById(resultId);
+            const loadingArea = document.getElementById(loadingId);
+
+            if (!conceptInput || !resultArea || !loadingArea) {
+                console.error("Error: Uno o más elementos no se encontraron en el DOM.");
+                if(resultArea) resultArea.innerHTML = "<p class='text-red-500'>Error interno. Intenta de nuevo.</p>";
+                return;
+            }
+
+            const concept = conceptInput.value.trim();
+            if (!concept) {
+                resultArea.innerHTML = "<p class='text-red-500'>Por favor, ingresa un concepto.</p>";
+                resultArea.classList.remove('hidden');
+                return;
+            }
+
+            loadingArea.classList.remove('hidden');
+            resultArea.classList.add('hidden');
+            resultArea.innerHTML = ''; // Clear previous results
+
+            const prompt = `Eres un educador financiero experto de TTACADEMY. Explica el siguiente concepto relacionado con ${courseContext}: "${concept}". Hazlo de forma sencilla, clara y concisa, ideal para alguien que está aprendiendo. Si es posible, incluye un pequeño ejemplo. La respuesta debe ser breve.`;
+            
+            const apiKey = ""; // API Key will be injected by the environment
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+
+            let chatHistory = [{ role: "user", parts: [{ text: prompt }] }];
+            const payload = { contents: chatHistory };
+
+            try {
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                if (!response.ok) {
+                    const errorData = await response.json();
+                    console.error('Error de API:', errorData);
+                    throw new Error(`Error de la API: ${response.status} ${response.statusText}. ${errorData?.error?.message || ''}`);
+                }
+
+                const data = await response.json();
+                
+                if (data.candidates && data.candidates.length > 0 &&
+                    data.candidates[0].content && data.candidates[0].content.parts &&
+                    data.candidates[0].content.parts.length > 0) {
+                    // Limpiamos un poco el texto, Gemini a veces añade Markdown que no queremos renderizar directamente como título
+                    let text = data.candidates[0].content.parts[0].text;
+                    text = text.replace(/^#+\s*.*/gm, (match) => `<p><strong>${match.replace(/^#+\s*/, '')}</strong></p>`); // Convertir titulos MD a parrafos en negrita
+                    resultArea.innerHTML = text.split('\n').map(p => `<p>${p}</p>`).join(''); // Envolver cada línea en un párrafo
+                } else {
+                    resultArea.innerHTML = "<p class='text-orange-500'>No se pudo obtener una explicación en este momento. Intenta con otro concepto.</p>";
+                    console.warn("Respuesta inesperada de la API:", data);
+                }
+            } catch (error) {
+                console.error('Error al contactar la API de Gemini:', error);
+                resultArea.innerHTML = `<p class='text-red-500'>Hubo un problema al obtener la explicación: ${error.message}. Por favor, intenta de nuevo más tarde.</p>`;
+            } finally {
+                loadingArea.classList.add('hidden');
+                resultArea.classList.remove('hidden');
+            }
+        }
